@@ -1,0 +1,2 @@
+rootProject.name = "Muslim-Square"
+include ':app'
