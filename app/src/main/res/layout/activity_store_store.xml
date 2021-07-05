@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Store.StoreActivity"
+    android:fitsSystemWindows="true"
+    android:id="@+id/storeDraweView">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/storeNavView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/nav_header"
+        android:layout_gravity="start"
+        android:theme="@style/navigationTheme"/>
+
+
+    <LinearLayout
+        android:id="@+id/storeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/store_app_bar_bg"
+            android:baselineAligned="false"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/tollbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_view_list_24" />
+
+
+            <ImageView
+                android:id="@+id/cartBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/cartBar"
+                android:src="@drawable/ic_baseline_notifications_active_24" />
+
+            <ImageView
+                android:id="@+id/secarchBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/notifications"
+                android:src="@drawable/ic_baseline_search_24" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/storeFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"></FrameLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
