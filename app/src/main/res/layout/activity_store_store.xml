@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:layout_margin="10dp"
     tools:context=".Store.StoreActivity">
 
     <com.google.android.material.navigation.NavigationView
@@ -29,7 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/store_app_bar_bg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/nav_header_bg"
             android:padding="20dp">
 
             <ImageView
@@ -70,7 +71,7 @@
             android:id="@+id/storeFrameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"></FrameLayout>
+            android:layout_margin="5dp"></FrameLayout>
 
 
     </LinearLayout>

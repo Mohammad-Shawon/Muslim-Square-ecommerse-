@@ -19,12 +19,14 @@
    <com.denzcoskun.imageslider.ImageSlider
        android:id="@+id/image_slider"
        android:layout_width="match_parent"
-       android:layout_height="220dp"
+       android:layout_height="200dp"
        app:iss_auto_cycle="true"
-       app:iss_period="3000"
+       app:iss_period="4000"
        app:iss_delay="0"
        android:layout_marginTop="5dp"
-       app:iss_corner_radius="10"/>
+       app:iss_corner_radius="5"/>
+
+   <include layout="@layout/horizontal_product_layout" />
 
 </LinearLayout>
 </FrameLayout>

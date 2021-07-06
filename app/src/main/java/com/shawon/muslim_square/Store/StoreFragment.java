@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -55,7 +57,6 @@ public class StoreFragment extends Fragment {
 
 
 
-
         return view;
     }
 
@@ -77,12 +78,8 @@ public class StoreFragment extends Fragment {
     public void setSlider(){
         List<SlideModel> slideModels = new ArrayList<>();
        slideModels.add(new SlideModel(R.drawable.japan,null,ScaleTypes.FIT));
-       slideModels.add(new SlideModel(R.drawable.a,null,ScaleTypes.FIT));
-       slideModels.add(new SlideModel(R.drawable.slider,null));
-       slideModels.add(new SlideModel(R.drawable.b,null));
-       slideModels.add(new SlideModel(R.drawable.c,null));
-       slideModels.add(new SlideModel(R.drawable.d,null));
-
+       slideModels.add(new SlideModel("https://muslim-square.com/wp-content/uploads/2021/07/MS-Web-Banner-2-scaled.jpg",null));
+       slideModels.add(new SlideModel("https://muslim-square.com/wp-content/uploads/2021/07/MS-Web-Banner-scaled.jpg",null));
        slider.setImageList(slideModels,ScaleTypes.FIT);
     }
 }
