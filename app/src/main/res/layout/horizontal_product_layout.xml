@@ -3,11 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="10dp">
+    android:background="@drawable/radius_color_bg"
+    android:layout_marginTop="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:layout_margin="10dp">
 
         <TextView
             android:id="@+id/horizontalProductTitle"
@@ -16,15 +19,16 @@
             android:text="Deals of the day!"
             android:fontFamily="@font/muli_black"
             android:textColor="@color/Accent"
-            android:textSize="18sp"/>
+            android:textSize="14sp"/>
         <Button
             android:id="@+id/horizontalproductViewAllBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="View All"
+            android:layout_marginBottom="8dp"
             android:textColor="@color/Accent"
-            android:fontFamily="@font/muli_black"/>
+            android:textSize="12sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/horizontalproductRecylerView"
@@ -35,5 +39,7 @@
 
 
     </RelativeLayout>
+
+
 
 </LinearLayout>

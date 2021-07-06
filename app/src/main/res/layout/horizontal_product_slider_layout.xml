@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="86dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp">
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/horizontalProductSliderImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/demophone"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/horizontalProductSliderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nokia C6"
+        android:textColor="@color/Accent"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/muli_black"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/horizontalProductSliderDesciption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SD 625 processor"
+        android:textColor="@color/colorSuccess"
+        android:layout_marginTop="4dp"
+        android:textSize="10dp"
+        android:lines="1"
+        android:ellipsize="end"/>
+    <TextView
+        android:id="@+id/horizontalProductSliderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: 10999 /-"
+        android:textColor="@color/Accent"
+        android:layout_marginTop="4dp"
+        android:textSize="10dp"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>
