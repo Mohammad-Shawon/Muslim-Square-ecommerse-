@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-   <group>
+   <group android:checkableBehavior="single">
        <item
            android:id="@+id/nav_shop"
            android:title="Shop"
@@ -11,7 +11,7 @@
       <item
           android:title="Order's">
           <menu>
-              <group>
+              <group android:checkableBehavior="single">
                   <item
                       android:id="@+id/nav_my_order"
                       android:title="My Oder's"
@@ -30,7 +30,7 @@
 
     <item android:title="Aditional">
        <menu>
-           <group>
+           <group android:checkableBehavior="single">
                <item
                    android:id="@+id/nav_complain"
                    android:title="My complain"

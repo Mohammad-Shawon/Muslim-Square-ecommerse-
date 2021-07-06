@@ -58,7 +58,7 @@ public class StoreActivity extends AppCompatActivity implements NavigationView.O
     private void navigationDrawar() {
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_gift);
+        navigationView.setCheckedItem(R.id.nav_shop);
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

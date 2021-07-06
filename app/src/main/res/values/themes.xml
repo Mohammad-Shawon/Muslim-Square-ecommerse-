@@ -13,8 +13,8 @@
 
     <!-- Navigation mtheme -->
     <style name="navigationTheme">
-        <item name="colorPrimary">@color/White</item>
-        <item name="colorControlHighlight">@color/Accent</item>
+        <item name="colorPrimary">@color/Accent</item>
+        <item name="colorControlHighlight">@color/White</item>
     </style>
 
 </resources>
