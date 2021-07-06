@@ -76,9 +76,12 @@ public class StoreFragment extends Fragment {
     //Set slider
     public void setSlider(){
         List<SlideModel> slideModels = new ArrayList<>();
-       slideModels.add(new SlideModel(R.drawable.ic_baseline_arrow_back_24,"ok",ScaleTypes.FIT));
-       slideModels.add(new SlideModel("https://bit.ly/2BteuF2",null,ScaleTypes.FIT));
-       slideModels.add(new SlideModel("https://bit.ly/3fLJf72",null,ScaleTypes.FIT));
+       slideModels.add(new SlideModel(R.drawable.japan,null,ScaleTypes.FIT));
+       slideModels.add(new SlideModel(R.drawable.a,null,ScaleTypes.FIT));
+       slideModels.add(new SlideModel(R.drawable.slider,null));
+       slideModels.add(new SlideModel(R.drawable.b,null));
+       slideModels.add(new SlideModel(R.drawable.c,null));
+       slideModels.add(new SlideModel(R.drawable.d,null));
 
        slider.setImageList(slideModels,ScaleTypes.FIT);
     }
