@@ -31,6 +31,16 @@
 
         <include layout="@layout/horizontal_product_layout"/>
 
+        <ImageView
+            android:id="@+id/addbanar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/addbanner"/>
+
+        <include layout="@layout/gride_product_layout"/>
+
     </LinearLayout>
 </ScrollView>
 </FrameLayout>

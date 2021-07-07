@@ -1,5 +1,6 @@
 package com.shawon.muslim_square.Classes.Adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.shawon.muslim_square.Category.CategoryActivity;
 import com.shawon.muslim_square.Classes.Models.CategoryModel;
 import com.shawon.muslim_square.R;
 
@@ -33,9 +36,26 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
     public void onBindViewHolder(@NonNull CategoryAdapter.categoryHolder holder, int position) {
         String icon = categoryModelList.get(position).getCategoryIconLink();
         String title = categoryModelList.get(position).getCategoryTitle();
-
+        Glide
+                .with(holder.imageView.getContext())
+                .load(icon)
+                .into(holder.imageView);
         holder.textView.setText(title);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (position != 0){
+                    Intent categoryIntent = new Intent(holder.itemView.getContext(),CategoryActivity.class);
+                    categoryIntent.putExtra("categoryName",title);
+                    holder.itemView.getContext().startActivity(categoryIntent);
+                }
+            }
+        });
     }
+
+
+
 
     @Override
     public int getItemCount() {
@@ -50,7 +70,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
 
              imageView = itemView.findViewById(R.id.category_thumbnail);
              textView = itemView.findViewById(R.id.category_title);
+
          }
+
      }
 }
 

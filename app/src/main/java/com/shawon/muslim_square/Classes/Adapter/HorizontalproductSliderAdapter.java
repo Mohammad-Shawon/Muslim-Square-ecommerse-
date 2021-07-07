@@ -52,7 +52,11 @@ public class HorizontalproductSliderAdapter extends RecyclerView.Adapter<Horizon
 
     @Override
     public int getItemCount() {
-        return list.size();
+        if (list.size() > 8){
+            return 8;
+        }else {
+            return list.size();
+        }
     }
 
     class Viewholder extends RecyclerView.ViewHolder {

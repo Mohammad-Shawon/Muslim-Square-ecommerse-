@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/radius_color_bg"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    android:background="@drawable/radius_color_bg">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,34 +12,36 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/horizontalProductTitle"
+            android:id="@+id/grideProductTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deals of the day!"
+            android:text="Trending!"
             android:fontFamily="@font/muli_black"
             android:textColor="@color/Accent"
             android:textSize="14sp"/>
         <Button
-            android:id="@+id/horizontalproductViewAllBtn"
+            android:id="@+id/grideproductViewAllBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="View All"
+            android:backgroundTint="@color/Accent"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/Accent"
-            android:textSize="12sp"
-            android:visibility="invisible"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/horizontalproductRecylerView"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+        <GridView
+            android:id="@+id/grideProductView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/horizontalproductViewAllBtn"/>
+            android:layout_height="320dp"
+            android:layout_below="@+id/grideproductViewAllBtn"
+            android:numColumns="2"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"/>
+
+
 
 
 
     </RelativeLayout>
-
-
 
 </LinearLayout>
