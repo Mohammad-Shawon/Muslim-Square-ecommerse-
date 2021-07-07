@@ -14,8 +14,6 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_activity);
-        catName = findViewById(R.id.catName);
-        String catename = getIntent().getStringExtra("categoryName");
-        catName.setText(catename);
+
     }
 }
