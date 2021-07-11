@@ -1,7 +1,5 @@
 package com.shawon.muslim_square.Store;
 
-import android.graphics.Matrix;
-import android.icu.number.Scale;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,13 +7,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -34,13 +29,16 @@ import java.util.List;
 public class StoreFragment extends Fragment {
     // Varriable
     RecyclerView categoryRecler;
-    RecyclerView horizontalRecyler;
     CategoryAdapter categoryAdapter;
+    RecyclerView horizontalRecyler;
+
     HorizontalproductSliderAdapter hAdapter;
     GrideProductAdapter grideProductAdapter;
     GridView grideProductView;
     ImageSlider slider;
     Button ViewAll,GrideViewAll;
+    RecyclerView homeRecyler;
+
 
     List<HorizontalproductSliderModel> horizontalproductSliderModelList;
 
@@ -57,11 +55,20 @@ public class StoreFragment extends Fragment {
 
         //////////////////Category///////////////
         categoryRecler = view.findViewById(R.id.category_recyler_view);
+
+        List<CategoryModel> catList = new ArrayList<>();
+        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/1946/1946488.png", "Home"));
+        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/2777/2777142.png", "Electronics"));
+        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/864/864685.png", "Books"));
+        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/15/15874.png", "Mobile"));
+        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/2533/2533267.png", "Gadget"));
+        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/1124/1124043.png", "Fashion"));
+
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         manager.setOrientation(RecyclerView.HORIZONTAL);
         categoryRecler.setLayoutManager(manager);
-
-        setCategory();
+        categoryAdapter = new CategoryAdapter(catList);
+        categoryRecler.setAdapter(categoryAdapter);
         //////////////////Category///////////////
 
 
@@ -84,25 +91,15 @@ public class StoreFragment extends Fragment {
         ///////////////////Gride product/////////////////////
 
 
+
         ///////////////Call function//////////////////////////
         setSlider();
 
         return view;
     }
 
-    /////////////////////set category/////////////////////////
-    private void setCategory() {
-        List<CategoryModel> list = new ArrayList<>();
-        list.add(new CategoryModel("https://image.flaticon.com/icons/png/512/1946/1946488.png", "Home"));
-        list.add(new CategoryModel("https://image.flaticon.com/icons/png/512/2777/2777142.png", "Electronics"));
-        list.add(new CategoryModel("https://image.flaticon.com/icons/png/512/864/864685.png", "Books"));
-        list.add(new CategoryModel("https://image.flaticon.com/icons/png/512/15/15874.png", "Mobile"));
-        list.add(new CategoryModel("https://image.flaticon.com/icons/png/512/2533/2533267.png", "Gadget"));
-        list.add(new CategoryModel("https://image.flaticon.com/icons/png/512/1124/1124043.png", "Fashion"));
 
-        categoryAdapter = new CategoryAdapter(list);
-        categoryRecler.setAdapter(categoryAdapter);
-    }
+
 
     //////////////////////////Set slider/////////////////////////
     public void setSlider() {
