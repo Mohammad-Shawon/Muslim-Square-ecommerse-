@@ -4,7 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Category.CategoryActivity">
+    tools:context=".Category.CategoryActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/nav_header_bg"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/productCategoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/Accent"
+            android:fontFamily="@font/muli_black"/>
+
+
+        <ImageView
+            android:id="@+id/cartBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+
+        <ImageView
+            android:id="@+id/secarchBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cartBar"
+            android:src="@drawable/ic_baseline_search_24" />
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/productCategoryGrideView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:background="@color/White"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"/>
 
 
 </LinearLayout>
