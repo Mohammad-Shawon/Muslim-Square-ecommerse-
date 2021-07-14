@@ -1,5 +1,6 @@
 package com.shawon.muslim_square.Classes.Adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.shawon.muslim_square.Classes.Models.HorizontalproductSliderModel;
+import com.shawon.muslim_square.Product.ProductDetailsActivity;
 import com.shawon.muslim_square.R;
 
 import java.util.List;
@@ -34,9 +36,9 @@ public class HorizontalproductSliderAdapter extends RecyclerView.Adapter<Horizon
     public void onBindViewHolder(@NonNull HorizontalproductSliderAdapter.Viewholder holder, int position) {
         ////////////// Get data from model//////////
         String image = list.get(position).getImage();
-        String nameh = list.get(position).getName();
-        String desch = list.get(position).getDesc();
-        String priceh = list.get(position).getPrice();
+        String name = list.get(position).getName();
+        String desc = list.get(position).getDesc();
+        String price = list.get(position).getPrice();
 
         ////////////Set data in elements////////////
         Glide
@@ -44,9 +46,18 @@ public class HorizontalproductSliderAdapter extends RecyclerView.Adapter<Horizon
                 .load(image)
                 .into(holder.thumnail);
 
-        holder.name.setText(nameh);
-        holder.desc.setText(desch);
-        holder.price.setText(priceh);
+        holder.name.setText(name);
+        holder.desc.setText(desc);
+        holder.price.setText(price);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(), ProductDetailsActivity.class);
+                intent.putExtra("productTitle",name);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
         
     }
 

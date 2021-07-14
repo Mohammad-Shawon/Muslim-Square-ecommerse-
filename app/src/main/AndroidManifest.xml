@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/ic_shopping_cart"
         android:supportsRtl="true"
         android:theme="@style/Theme.MuslimSquare">
-        <activity android:name=".Category.CategoryActivity"></activity>
+        <activity android:name=".Product.ProductDetailsActivity"></activity>
+        <activity android:name=".Category.CategoryActivity" />
         <activity android:name=".Store.StoreActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Common.SplashActivity">

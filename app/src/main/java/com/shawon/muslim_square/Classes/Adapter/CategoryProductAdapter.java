@@ -1,5 +1,6 @@
 package com.shawon.muslim_square.Classes.Adapter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.shawon.muslim_square.Classes.Models.productCategoryModel;
+import com.shawon.muslim_square.Product.ProductDetailsActivity;
 import com.shawon.muslim_square.R;
 
 import java.util.List;
@@ -59,6 +61,15 @@ public class CategoryProductAdapter extends BaseAdapter {
             title.setText(productCategoryModelList.get(position).getName());
             desc.setText(productCategoryModelList.get(position).getDesc());
             price.setText(productCategoryModelList.get(position).getPrice());
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(view.getContext(), ProductDetailsActivity.class);
+                    intent.putExtra("productTitle", productCategoryModelList.get(position).getName());
+                    view.getContext().startActivity(intent);
+                }
+            });
 
         } else {
             return convertView;

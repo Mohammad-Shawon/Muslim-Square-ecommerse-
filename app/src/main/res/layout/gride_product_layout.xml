@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="View All"
-            android:backgroundTint="@color/Accent"
+            android:backgroundTint="@color/Primary"
             android:layout_marginBottom="8dp"
             android:textColor="@color/White"
             android:textSize="12sp" />

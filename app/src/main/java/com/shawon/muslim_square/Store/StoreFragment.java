@@ -62,7 +62,6 @@ public class StoreFragment extends Fragment {
         catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/864/864685.png", "Books"));
         catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/15/15874.png", "Mobile"));
         catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/2533/2533267.png", "Gadget"));
-        catList.add(new CategoryModel("https://image.flaticon.com/icons/png/512/1124/1124043.png", "Fashion"));
 
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         manager.setOrientation(RecyclerView.HORIZONTAL);

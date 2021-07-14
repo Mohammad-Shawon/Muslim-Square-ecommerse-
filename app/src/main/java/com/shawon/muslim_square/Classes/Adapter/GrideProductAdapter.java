@@ -1,5 +1,6 @@
 package com.shawon.muslim_square.Classes.Adapter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -11,8 +12,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.shawon.muslim_square.Classes.Models.HorizontalproductSliderModel;
+import com.shawon.muslim_square.Product.ProductDetailsActivity;
 import com.shawon.muslim_square.R;
 
+import java.io.Serializable;
 import java.util.List;
 
 import static com.shawon.muslim_square.R.drawable.gride_product_bg;
@@ -62,6 +65,16 @@ public class GrideProductAdapter extends BaseAdapter {
             name.setText(list.get(position).getName());
             desc.setText(list.get(position).getDesc());
             price.setText(list.get(position).getPrice());
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(view.getContext(), ProductDetailsActivity.class);
+                    intent.putExtra("productTitle",  list.get(position).getName());
+                    view.getContext().startActivity(intent);
+                }
+            });
+
         }else {
             return convertView;
         }
